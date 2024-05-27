@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ProClinic Hospital </title>
+	
+	<link rel="shortcut icon" type="image/png" href="images/fav.png">
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="css/themify-icons.css">
+	
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/green.css" id="style_theme">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.6.1/toastify.css" integrity="sha512-VSD3lcSci0foeRFRHWdYX4FaLvec89irh5+QAGc00j5AOdow2r5MFPhoPEYBUQdyarXwbzyJEO7Iko7+PnPuBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.6.1/toastify.min.css" integrity="sha512-UiKdzM5DL+I+2YFxK+7TDedVyVm7HMp/bN85NeWMJNYortoll+Nd6PU9ZDrZiaOsdarOyk9egQm6LOJZi36L2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+	<script src="js/modernizr.min.js"></script>
+</head>
+
+<body class="auth-bg">
+	
+	<div class="loading">
+		<div class="spinner">
+			<div class="double-bounce1"></div>
+			<div class="double-bounce2"></div>
+		</div>
+	</div>
+	
+	
+	<div class="theme-settings" id="switcher">
+		<span class="theme-click">
+			<span class="ti-settings"></span>
+		</span>
+		<span class="theme-color theme-default theme-active" data-color="green"></span>
+		<span class="theme-color theme-blue" data-color="blue"></span>
+		<span class="theme-color theme-red" data-color="red"></span>
+		<span class="theme-color theme-violet" data-color="violet"></span>
+		<span class="theme-color theme-yellow" data-color="yellow"></span>
+	</div>
+	
+	<div class="wrapper">
+		
+		<div id="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 auth-box">
+						<div class="proclinic-box-shadow">
+							<h3 class="widget-title">Login</h3>
+							<form class="widget-form">
+								
+								<div class="form-group row">
+									<div class="col-sm-12">
+										<input name="user" placeholder="Email" class="form-control" required="" data-validation="length alphanumeric" id="email" data-validation-length="3-12"
+										 data-validation-error-msg="User name has to be an alphanumeric value (3-12 chars)" data-validation-has-keyup-event="true">
+									</div>
+								</div>
+								
+								
+								<div class="form-group row">
+									<div class="col-sm-12">
+										<input type="password" placeholder="Password" name="pass_confirmation" class="form-control" data-validation="strength" id="password" data-validation-strength="2"
+										 data-validation-has-keyup-event="true">
+									</div>
+								</div>
+								
+								
+								
+											
+								<div class="button-btn-block">
+									<button type="button" class="btn btn-primary btn-lg btn-block" onclick="login()">Login</button>
+								</div>
+								
+
+								
+								<div class="auth-footer-text">
+									<small>New User,
+										<a href="sign-up.html">Sign Up</a> Here</small>
+								</div>
+								
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<!-- Jquery Library-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<!-- Popper Library-->
+	<script src="js/popper.min.js"></script>
+	<!-- Bootstrap Library-->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Custom Script-->
+	<script src="js/custom.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-auth-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-database-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-storage-compat.js"></script>
+	<script>
+		const firebaseConfig = {
+	  apiKey: "AIzaSyCttsXSUs2LUmpJ7HbgV62ee1Qef0CWpAo",
+	  authDomain: "hospital-management-syst-20a5c.firebaseapp.com",
+	  projectId: "hospital-management-syst-20a5c",
+	  storageBucket: "hospital-management-syst-20a5c.appspot.com",
+	  messagingSenderId: "1036893115912",
+	  appId: "1:1036893115912:web:c7fde40bb8d64b4292a3bd",
+	  measurementId: "G-5VLWTFYJ7Q"
+	};
+	
+	firebase.initializeApp(firebaseConfig);
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.6.1/toastify.js" integrity="sha512-MnKz2SbnWiXJ/e0lSfSzjaz9JjJXQNb2iykcZkEY2WOzgJIWVqJBFIIPidlCjak0iTH2bt2u1fHQ4pvKvBYy6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.6.1/toastify.min.js" integrity="sha512-79j1YQOJuI8mLseq9icSQKT6bLlLtWknKwj1OpJZMdPt2pFBry3vQTt+NZuJw7NSd1pHhZlu0s12Ngqfa371EA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="./login.js"></script>
+</body>
+
+
+
+</html>
